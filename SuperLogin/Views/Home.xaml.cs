@@ -9,6 +9,7 @@ namespace SuperLogin.Views
     {
         public Home()
         {
+            this.Title = "Home";
             InitializeComponent();
         }
     }

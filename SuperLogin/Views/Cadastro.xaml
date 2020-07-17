@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SuperLogin.Views.Cadastro">
+    <StackLayout Margin="10">
+        <Image
+            HorizontalOptions="Center"
+            Source="firebase" />
+        <Label
+            Text="E-mail"
+            TextColor="#D1D0CF"
+            FontSize="25"
+            HorizontalOptions="CenterAndExpand" />
+        <Entry
+            BackgroundColor="#E4E1DF"
+            TextColor="Black"
+            Placeholder="E-mail"
+            Text="{Binding Email}"
+            />
+
+        <Label
+            Text="Senha"
+            TextColor="#D1D0CF"
+            FontSize="25"
+            HorizontalOptions="CenterAndExpand" />
+        <Entry
+            IsPassword="True"
+            BackgroundColor="#E4E1DF"
+            TextColor="Black"
+            Placeholder="Senha"
+            Text="{Binding Senha}"
+            />
+
+        <Label
+            Text="Confirmar Senha"
+            TextColor="#D1D0CF"
+            FontSize="25"
+            HorizontalOptions="CenterAndExpand"            
+            />
+        <Entry
+            IsPassword="True"
+            BackgroundColor="#E4E1DF"
+            TextColor="Black"
+            Placeholder="Confirmar Senha"
+            Text="{Binding ConfirmaSenha}"
+            />
+
+        <Button
+            Text="Cadastrar"
+            BackgroundColor="#0F6ABB"
+            TextColor="#FFF"
+            Command="{Binding CadastrarCommand}"
+            />
+    </StackLayout>
+</ContentPage>
