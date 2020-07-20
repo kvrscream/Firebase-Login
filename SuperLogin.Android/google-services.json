@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "660468830937",
+    "firebase_url": "https://xamarin-login-79e8a.firebaseio.com",
+    "project_id": "xamarin-login-79e8a",
+    "storage_bucket": "xamarin-login-79e8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660468830937:android:c2ba22f0b14f6e7fb064c8",
+        "android_client_info": {
+          "package_name": "com.firebase.teste.super_login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660468830937-l8oo0e486gj7f4iec6098ma0nah5hft2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHtB8RhUTu-k_9KNNGOPBE_e8Egw5OXZk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660468830937-l8oo0e486gj7f4iec6098ma0nah5hft2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
