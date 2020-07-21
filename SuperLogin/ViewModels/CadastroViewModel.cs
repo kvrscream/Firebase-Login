@@ -84,7 +84,7 @@ namespace SuperLogin.ViewModels
 
                     StringContent content = new StringContent(usuarioJson, encoding: Encoding.UTF8, "application/json");
 
-                    HttpResponseMessage clientRequest = await client.PostAsync("http://10.0.2.2:4004/api/createUser",content);
+                    HttpResponseMessage clientRequest = await client.PostAsync("https://xamarin-api-dev.herokuapp.com/api/createUser", content);
                     if (clientRequest.IsSuccessStatusCode)
                     {
                         string response = await clientRequest.Content.ReadAsStringAsync();

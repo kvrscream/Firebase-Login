@@ -66,7 +66,7 @@ namespace SuperLogin.ViewModels
 
                 using(HttpClient client = new HttpClient())
                 {
-                    HttpResponseMessage responseMessage = await client.PostAsync("http://10.0.2.2:4004/api/login", content);
+                    HttpResponseMessage responseMessage = await client.PostAsync("https://xamarin-api-dev.herokuapp.com/api/login", content);
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         string message = await responseMessage.Content.ReadAsStringAsync();
