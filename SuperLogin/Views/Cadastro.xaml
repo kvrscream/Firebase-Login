@@ -49,5 +49,10 @@
             TextColor="#FFF"
             Command="{Binding CadastrarCommand}"
             />
+
+        <ActivityIndicator
+            IsVisible="{Binding Aguarde}"
+            IsRunning="{Binding Aguarde}"
+            />
     </StackLayout>
 </ContentPage>

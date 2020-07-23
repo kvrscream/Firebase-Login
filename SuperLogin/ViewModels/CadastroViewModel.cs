@@ -67,11 +67,25 @@ namespace SuperLogin.ViewModels
             //);
         }
 
+        bool _aguarde;
+        public bool Aguarde
+        {
+            get
+            {
+                return _aguarde;
+            }
+            set
+            {
+                _aguarde = value;
+                OnPropertChanged();
+                OnPropertChanged(nameof(Aguarde));
+            }
+        }
 
         public async Task<bool> CreateUser(Usuario usuario)
         {
             bool complete = false;
-
+            Aguarde = true;
             try
             {
                 using(HttpClient client = new HttpClient())
@@ -93,10 +107,14 @@ namespace SuperLogin.ViewModels
                         if(responseModel.Status == 200)
                         {
                             complete = true;
+                            Aguarde = false;
                         }
                     }
                 }
-            } catch(Exception ex) { }
+            } catch(Exception ex)
+            {
+                Aguarde = false;
+            }
 
 
             return complete;

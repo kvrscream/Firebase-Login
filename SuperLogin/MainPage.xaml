@@ -38,6 +38,11 @@
             TextColor="#0F6ABB"
             Pressed="Button_Pressed"
             />
+
+        <ActivityIndicator
+            IsRunning="{Binding Aguarde}"
+            IsVisible="{Binding Aguarde}"
+            />
     </StackLayout>
 
 </ContentPage>

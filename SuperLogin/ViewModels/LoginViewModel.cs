@@ -49,11 +49,25 @@ namespace SuperLogin.ViewModels
         }
 
 
+        bool _aguarde;
+        public bool Aguarde
+        {
+            get
+            {
+                return _aguarde;
+            }
+            set
+            {
+                _aguarde = value;
+                OnPropertChanged();
+                OnPropertChanged(nameof(Aguarde));
+            }
+        }
 
         public async Task<bool> Logar(Usuario usuario)
         {
             bool complete = true;
-
+            Aguarde = true;
             try
             {
                 string usuarioJson = JsonConvert.SerializeObject(new
@@ -74,11 +88,15 @@ namespace SuperLogin.ViewModels
                         if(response.Status == 200)
                         {
                             complete = true;
+                            Aguarde = false;
                         }
                     }
                 }
 
-            } catch(Exception ex) { }
+            } catch(Exception ex)
+            {
+                Aguarde = false;
+            }
 
             return complete;
         }
